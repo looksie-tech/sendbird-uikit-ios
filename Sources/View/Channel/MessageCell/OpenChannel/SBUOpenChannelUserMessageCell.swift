@@ -180,7 +180,6 @@ open class SBUOpenChannelUserMessageCell: SBUOpenChannelContentBaseMessageCell {
             UIApplication.shared.canOpenURL(url) else {
             return
         }
-        
-        url.open()
+        URLOpener.shared.open(url)
     }
 }

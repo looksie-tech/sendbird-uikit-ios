@@ -57,7 +57,6 @@
 		9CED4D1C24ADE69900D81B10 /* CustomChannelListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CED4D1B24ADE69900D81B10 /* CustomChannelListCell.swift */; };
 		9CED4D1F24AF02D800D81B10 /* SampleManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CED4D1E24AF02D800D81B10 /* SampleManager.swift */; };
 		9CF5343127F1852E00344544 /* UIStackView.SBUIKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CF5336627F1852E00344544 /* UIStackView.SBUIKit.swift */; };
-		9CF5343227F1852E00344544 /* URL+SBUKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CF5336727F1852E00344544 /* URL+SBUKit.swift */; };
 		9CF5343327F1852E00344544 /* Array+SBUIKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CF5336827F1852E00344544 /* Array+SBUIKit.swift */; };
 		9CF5343427F1852E00344544 /* UIColor+SBUIKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CF5336927F1852E00344544 /* UIColor+SBUIKit.swift */; };
 		9CF5343527F1852E00344544 /* Formatter+SBUIKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CF5336A27F1852E00344544 /* Formatter+SBUIKit.swift */; };
@@ -224,6 +223,7 @@
 		A9C29B332564C65E007248F5 /* CommunityChannelListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9C29B322564C65E007248F5 /* CommunityChannelListViewController.swift */; };
 		A9C29B382564FF63007248F5 /* CommunityChannelCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9C29B372564FF63007248F5 /* CommunityChannelCell.swift */; };
 		A9F1B1B62579F28B008DEB11 /* CreateCommunityChannelViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9F1B1B52579F28B008DEB11 /* CreateCommunityChannelViewController.swift */; };
+		AF19FD1B28324C6600582932 /* URLOpener.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF19FD1A28324C6600582932 /* URLOpener.swift */; };
 		C6D3DCE826141350003E6DCB /* SendBirdSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C6D3DCE726141350003E6DCB /* SendBirdSDK.framework */; };
 /* End PBXBuildFile section */
 
@@ -312,7 +312,6 @@
 		9CED4D1B24ADE69900D81B10 /* CustomChannelListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomChannelListCell.swift; sourceTree = "<group>"; };
 		9CED4D1E24AF02D800D81B10 /* SampleManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleManager.swift; sourceTree = "<group>"; };
 		9CF5336627F1852E00344544 /* UIStackView.SBUIKit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIStackView.SBUIKit.swift; sourceTree = "<group>"; };
-		9CF5336727F1852E00344544 /* URL+SBUKit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "URL+SBUKit.swift"; sourceTree = "<group>"; };
 		9CF5336827F1852E00344544 /* Array+SBUIKit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Array+SBUIKit.swift"; sourceTree = "<group>"; };
 		9CF5336927F1852E00344544 /* UIColor+SBUIKit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+SBUIKit.swift"; sourceTree = "<group>"; };
 		9CF5336A27F1852E00344544 /* Formatter+SBUIKit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Formatter+SBUIKit.swift"; sourceTree = "<group>"; };
@@ -480,6 +479,7 @@
 		A9C29B322564C65E007248F5 /* CommunityChannelListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommunityChannelListViewController.swift; sourceTree = "<group>"; };
 		A9C29B372564FF63007248F5 /* CommunityChannelCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommunityChannelCell.swift; sourceTree = "<group>"; };
 		A9F1B1B52579F28B008DEB11 /* CreateCommunityChannelViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateCommunityChannelViewController.swift; sourceTree = "<group>"; };
+		AF19FD1A28324C6600582932 /* URLOpener.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLOpener.swift; sourceTree = "<group>"; };
 		C6D3DCE726141350003E6DCB /* SendBirdSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SendBirdSDK.framework; path = Pods/SendBirdSDK/SendBirdSDK.framework; sourceTree = "<group>"; };
 		D9AA853E66DC6613E1CCFB10 /* Pods-SendBirdUIKit-Sample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SendBirdUIKit-Sample.release.xcconfig"; path = "Target Support Files/Pods-SendBirdUIKit-Sample/Pods-SendBirdUIKit-Sample.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -807,7 +807,6 @@
 			isa = PBXGroup;
 			children = (
 				9CF5336627F1852E00344544 /* UIStackView.SBUIKit.swift */,
-				9CF5336727F1852E00344544 /* URL+SBUKit.swift */,
 				9CF5336827F1852E00344544 /* Array+SBUIKit.swift */,
 				9CF5336927F1852E00344544 /* UIColor+SBUIKit.swift */,
 				9CF5336A27F1852E00344544 /* Formatter+SBUIKit.swift */,
@@ -834,6 +833,7 @@
 				9CF5337927F1852E00344544 /* SBUPropertyWrapper.swift */,
 				9CF5337A27F1852E00344544 /* SBUUtils.swift */,
 				9CF5337B27F1852E00344544 /* SBULogger.swift */,
+				AF19FD1A28324C6600582932 /* URLOpener.swift */,
 			);
 			path = Util;
 			sourceTree = "<group>";
@@ -1642,6 +1642,7 @@
 				9CF5345E27F1852E00344544 /* SBUBaseViewController.swift in Sources */,
 				9CED4D0724ADA66200D81B10 /* UserDefaults+Ext.swift in Sources */,
 				9CF5346227F1852E00344544 /* SBUInviteUserListViewModel.swift in Sources */,
+				AF19FD1B28324C6600582932 /* URLOpener.swift in Sources */,
 				A9A3AECE256B786E00007FC2 /* UIImageView+Ext.swift in Sources */,
 				9CED4CF024AC817400D81B10 /* UIView+Ext.swift in Sources */,
 				9CF5348927F1852F00344544 /* SBUOpenChannelContentBaseMessageCell.swift in Sources */,
@@ -1673,7 +1674,6 @@
 				9CF5348027F1852F00344544 /* QuotedFileCommonContentView.swift in Sources */,
 				9CED4D1924ADE42A00D81B10 /* MemberListCustomManager.swift in Sources */,
 				9CF5349727F1852F00344544 /* SBUMessageStateView.swift in Sources */,
-				9CF5343227F1852E00344544 /* URL+SBUKit.swift in Sources */,
 				9CF5348427F1852F00344544 /* SBUQuotedUserMessageView.swift in Sources */,
 				9CF5349127F1852F00344544 /* SBUUserMessageCell.swift in Sources */,
 				9CF534C327F1852F00344544 /* SBUQuotedMessageViewProtocol.swift in Sources */,
