@@ -8,7 +8,7 @@
 
 import UIKit
 
-internal extension URL {
+public extension URL {
     func open() {
         UIApplication.shared.open(self, options: [.universalLinksOnly : true]) { (success) in
             if !success {
