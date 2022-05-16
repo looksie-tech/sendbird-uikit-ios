@@ -14,9 +14,11 @@ Pod::Spec.new do |s|
 	s.swift_version = '5'
 	s.source = { :git => "https://github.com/looksie-tech/sendbird-uikit-ios", :tag => "v#{s.version}" }
 	# s.ios.vendored_frameworks = 'Framework/SendBirdUIKit.xcframework'
-	s.source_files = 'Sources/*'
+	s.ios.source_files = 'Sources/**/*.{h,m,swift}'
+  	s.ios.resources = ['Sources/**/*.{xib,storyboard,xcassets}']
 	s.ios.frameworks = ["UIKit", "Foundation", "CoreData", "SendBirdSDK"]
 	s.requires_arc = true
 	s.dependency "SendBirdSDK", "~>3.1.7"
 	s.ios.library = "icucore"
+	s.pod_target_xcconfig = { 'PRODUCT_BUNDLE_IDENTIFIER': 'com.sendbird.uikit' }
 end
