@@ -10,7 +10,7 @@ import Foundation
 import UIKit
 
 public class URLOpener {
-    static let shared = URLOpener()
+    public static let shared = URLOpener()
     
     public var opener: URLOpeningProtocol = DefaultURLOpener()
     
