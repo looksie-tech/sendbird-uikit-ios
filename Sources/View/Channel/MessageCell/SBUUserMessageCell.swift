@@ -174,6 +174,6 @@ open class SBUUserMessageCell: SBUContentBaseMessageCell {
             return
         }
         
-        url.open()
+        URLOpener.shared.open(url)
     }
 }

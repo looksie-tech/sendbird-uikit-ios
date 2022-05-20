@@ -8,13 +8,13 @@
 
 import UIKit
 
-internal extension URL {
-    func open() {
-        UIApplication.shared.open(self, options: [.universalLinksOnly : true]) { (success) in
-            if !success {
-                //open normally
-                UIApplication.shared.open(self, options: [:], completionHandler: nil)
-            }
-        }
-    }
-}
+//internal extension URL {
+//    func open() {
+//        UIApplication.shared.open(self, options: [.universalLinksOnly : true]) { (success) in
+//            if !success {
+//                //open normally
+//                UIApplication.shared.open(self, options: [:], completionHandler: nil)
+//            }
+//        }
+//    }
+//}

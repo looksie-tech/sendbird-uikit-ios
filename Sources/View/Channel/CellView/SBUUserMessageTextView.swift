@@ -166,7 +166,7 @@ extension SBUUserMessageTextView: UITextViewDelegate {
         if interaction == .presentActions {
             self.longPressHandler?(URL)
         } else if interaction == .invokeDefaultAction {
-            URL.open()
+            URLOpener.shared.open(URL)
         }
 
         return false
