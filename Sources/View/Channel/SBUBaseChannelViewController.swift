@@ -74,6 +74,7 @@ open class SBUBaseChannelViewController: SBUBaseViewController {
     var messageInputViewBottomConstraint: NSLayoutConstraint!
     var tableViewTopConstraint: NSLayoutConstraint!
     
+    public var reportHandler: ()
     // MARK: - Lifecycle
     
     required public init?(coder: NSCoder) {
@@ -855,6 +856,14 @@ open class SBUBaseChannelViewController: SBUBaseViewController {
                     guard let fileMessage = message as? SBDFileMessage else { return }
                     
                     SBUDownloadManager.save(fileMessage: fileMessage, parent: self)
+                }
+            case .report:
+                return SBUMenuItem(
+                    title: SBUStringSet.Report,
+                    color: self.theme.menuTextColor,
+                    image: UIImage(systemName: "hand.raised")
+                ) { [weak self] in
+                    SBUGlobalCustomParams.reportMessageHandler?(message)                    
                 }
             }
         }

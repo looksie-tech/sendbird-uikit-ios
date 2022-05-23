@@ -119,4 +119,7 @@ public class SBUGlobalCustomParams: NSObject {
     /// ```
     /// - Since: 1.2.2
     public static var messageListParamsBuilder:((_ params: SBDMessageListParams?) -> Void)? = nil
+    
+    public static var reportMessageHandler:((_ params: SBDBaseMessage?) -> Void)? = nil
+
 }

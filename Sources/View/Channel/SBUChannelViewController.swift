@@ -891,7 +891,7 @@ open class SBUChannelViewController: SBUBaseChannelViewController {
             switch message {
             case let userMessage as SBDUserMessage:
                 let isCurrentUser = userMessage.sender?.userId == SBUGlobals.CurrentUser?.userId
-                let types: [MessageMenuItem] = isCurrentUser ? [.copy, .edit, .delete] : [.copy]
+                let types: [MessageMenuItem] = isCurrentUser ? [.copy, .edit, .delete] : [.copy, .report]
                 cell.isSelected = true
                 
                 if SBUEmojiManager.useReaction(channel: self.channel) {
@@ -901,7 +901,7 @@ open class SBUChannelViewController: SBUBaseChannelViewController {
                 }
             case let fileMessage as SBDFileMessage:
                 let isCurrentUser = fileMessage.sender?.userId == SBUGlobals.CurrentUser?.userId
-                let types: [MessageMenuItem] = isCurrentUser ? [.save, .delete] : [.save]
+                let types: [MessageMenuItem] = isCurrentUser ? [.save, .delete] : [.save, .report]
                 cell.isSelected = true
                 
                 if SBUEmojiManager.useReaction(channel: self.channel) {
@@ -915,7 +915,7 @@ open class SBUChannelViewController: SBUBaseChannelViewController {
         default:
             // Unknown Message
             guard message.sender?.userId == SBUGlobals.CurrentUser?.userId else { return }
-            let types: [MessageMenuItem] = [.delete]
+            let types: [MessageMenuItem] = [.delete, .report]
             self.showMenuModal(cell, indexPath: indexPath, message: message, types: types)
         }
     }
@@ -1298,6 +1298,9 @@ open class SBUChannelViewController: SBUBaseChannelViewController {
             case .save:
                 guard let fileMessage = message as? SBDFileMessage else { return }
                 SBUDownloadManager.save(fileMessage: fileMessage, parent: self)
+                
+            case .report:
+                SBUGlobalCustomParams.reportMessageHandler?(message)
             }
         }
 

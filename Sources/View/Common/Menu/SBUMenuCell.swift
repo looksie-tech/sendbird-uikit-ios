@@ -60,6 +60,10 @@ class SBUMenuCell: UITableViewCell {
                 with: theme.actionSheetItemColor,
                 to: SBUIconSetType.Metric.iconActionSheetItem
             )
+        case .report:
+            self.titleLabel?.text = SBUStringSet.Report
+            self.iconImageView.image = UIImage(systemName: "hand.raised")
+            self.iconImageView.tintColor = theme.actionSheetItemColor
         }
     }
 }

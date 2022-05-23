@@ -195,6 +195,7 @@ import SendBirdSDK
     case copy
     case edit
     case delete
+    case report
 }
 
 /// This is an enumeration for new message info item type.
